@@ -1,0 +1,35 @@
+Hines, M.L. and Carnevale, N.T. NEURON: a tool for neuroscientists.
+The Neuroscientist 7:123-135, 2001.
+
+The value of Ra for figures 3,4,5 is 160 instead of the 180 stated in the
+paper.
+
+In fig 9 the dt plot can vary in details from the figure due to
+changes in implementation and cvode upgrades. A value of 1e-10 is added
+to dt before taking the log10 because dt=0 at stimulus discontinuities.
+Also we display the order used by cvode as a function of time.
+
+Usage notes:
+
+On all platforms:
+
+This model has been verified under NEURON 5.7.159 on mswin
+unix and mac platforms.  The radio buttons for Figs. 1-8 generate the 
+corresponding figures automatically.  Figure 9 actually requires a 
+click on Init & Run (e.g. so users can explore effects of changing 
+absolute tolerance),
+
+mswin: Auto-launch (ModelDB) or download and extract the zip file.
+Then double click on mosinit.hoc in windows explorer.
+
+unix: Auto-launch, or download and extract the archive.  Then type 
+nrngui mosinit.hoc
+at the command line after cd'ing to the hines2001 directory.
+
+mac OS X: Download the archive.  Drag and drop the archive on the mos2nrn 
+icon in the Neuron application directory.
+
+The channel information for Fig. 9 is the same as Mainen & Sejnowski
+http://senselab.med.yale.edu/senselab/modeldb/ShowModel.asp?model=2488
+and the cell type is Neocortical pyramidal neuron: deep
+The cell for Figs. 7 and 8 is a Dentate granule cell.

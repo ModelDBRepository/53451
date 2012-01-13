@@ -1,0 +1,11 @@
+create soma
+access soma
+insert pas
+{load_file(1, "fig1.ses")}
+{
+Graph[0].exec_menu("Keep Lines")
+run()
+steps_per_ms = .05  dt=20 run()
+steps_per_ms = .025 dt=40 run()
+Graph[0].exec_menu("Keep Lines")
+}

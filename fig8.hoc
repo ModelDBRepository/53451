@@ -1,0 +1,14 @@
+load_file(1, "fig8.ses")
+secondorder=2
+proc prun() {local i, j
+	run()
+	for j=0,1 for i=2,3 Graph[i].exec_menu("Keep Lines")
+}
+
+{
+Graph[1].exec_menu("Keep Lines")
+prun()
+forall nseg=3  prun()
+forall nseg=1  prun()
+Graph[1].exec_menu("Keep Lines")
+}

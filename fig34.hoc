@@ -1,0 +1,18 @@
+load_file(1, "fig34.ses")
+secondorder=2
+proc srun() {
+	stdinit()
+	continuerun(1.1)
+	Graph[2].exec_menu("Keep Lines")
+	Graph[2].exec_menu("Keep Lines")
+	continuerun(7.2)
+	Graph[2].exec_menu("Keep Lines")
+	Graph[2].exec_menu("Keep Lines")
+	continuerun(50)
+	Graph[1].exec_menu("Keep Lines")
+	Graph[1].exec_menu("Keep Lines")
+}
+srun()
+nseg=5
+srun()
+

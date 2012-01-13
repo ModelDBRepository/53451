@@ -1,0 +1,9 @@
+load_file(1, "fig7.ses")
+secondorder=2
+{
+Graph[1].exec_menu("Keep Lines")
+run()
+forall nseg=3  run()
+forall nseg=1  run()
+Graph[1].exec_menu("Keep Lines")
+}

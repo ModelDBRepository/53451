@@ -1,0 +1,4 @@
+load_file("nrngui.hoc")
+load_file("demofig1.hoc")
+fig1d()
+load_file(1, "fig9.ses")

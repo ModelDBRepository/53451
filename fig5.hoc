@@ -1,0 +1,9 @@
+load_file(1, "fig5.ses")
+secondorder=2
+{
+Graph[1].exec_menu("Keep Lines")
+run()
+steps_per_ms = 40  dt = .025  run()
+steps_per_ms = 80  dt = .0125  run()
+Graph[1].exec_menu("Keep Lines")
+}

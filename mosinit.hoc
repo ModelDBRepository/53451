@@ -1,0 +1,40 @@
+load_file("nrngui.hoc")
+
+xpanel("Figures")
+xradiobutton("Fig 1", "restart(\"fig1\")")
+xradiobutton("Fig 3,4", "restart(\"fig34\")")
+xradiobutton("Fig 5", "restart(\"fig5\")")
+xradiobutton("Fig 7", "restart(\"fig7\")")
+xradiobutton("Fig 8", "restart(\"fig8\")")
+xradiobutton("Fig 9", "restart(\"fig9\")")
+xpanel(5, 100)
+
+pwmcnt = PWManager[0].count
+
+restarting_=0
+proc restart() { local i
+	if (restarting_) { return }
+	restarting_ = 1
+	objref graphItem, save_window_
+	for i=0, n_graph_lists-1 {
+		graphList[i].remove_all()
+	}
+	flush_list.remove_all()
+	fast_flush_list.remove_all()
+	doNotify()
+	for (i= PWManager[0].count-1; i >= pwmcnt; i -= 1) {
+		PWManager[0].close(i)
+		doNotify()
+	}
+	forall delete_section()
+	stoprun = 0
+	cvode_active(0)
+	secondorder=0
+	dt = .025
+	steps_per_ms = 40
+	tstop = 5
+	sprint(tstr, "%s.hoc", $s1)
+	load_file(1, tstr)
+	restarting_ = 0
+}
+
