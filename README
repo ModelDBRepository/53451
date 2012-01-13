@@ -33,3 +33,6 @@ The channel information for Fig. 9 is the same as Mainen & Sejnowski
 http://senselab.med.yale.edu/senselab/modeldb/ShowModel.asp?model=2488
 and the cell type is Neocortical pyramidal neuron: deep
 The cell for Figs. 7 and 8 is a Dentate granule cell.
+
+20120113 cad.mod updated from euler to derivimplicit as per
+http://www.neuron.yale.edu/phpbb/viewtopic.php?f=28&t=592

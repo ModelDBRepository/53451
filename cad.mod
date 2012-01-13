@@ -71,7 +71,7 @@ ASSIGNED {
 }
 	
 BREAKPOINT {
-	SOLVE state METHOD euler
+	SOLVE state METHOD derivimplicit
 :printf("cad BREAKPOINT entry: t=%g cai=%g ica=%g\n", t, cai, ica)
 }
 
@@ -84,10 +84,3 @@ DERIVATIVE state {
 	cai' = drive_channel + (cainf-cai)/taur
 :printf("cad state exit: t=%g cai=%g ica=%g\n", t, cai, ica)
 }
-
-
-
-
-
-
-
