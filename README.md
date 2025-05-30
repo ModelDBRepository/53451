@@ -25,9 +25,8 @@ The channel information for Fig. 9 is the same as Mainen & Sejnowski
 and the cell type is Neocortical pyramidal neuron: deep
 The cell for Figs. 7 and 8 is a Dentate granule cell.
 
+## Changelog
 20120113 cad.mod updated from euler to derivimplicit as per
 [http://www.neuron.yale.edu/phpbb/viewtopic.php?f=28&t=592](http://www.neuron.yale.edu/phpbb/viewtopic.php?f=28&t=592)
 
----
-
-2025-05-27 – Standardized to Markdown.
+20250527 Standardized to Markdown.
